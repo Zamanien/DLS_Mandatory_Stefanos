@@ -18,3 +18,5 @@ ab -k -c 20 -n 250 "http://localhost:8080/auth?username=matt&password=password"
 ```
 node --prof-process isolate-0xnnnnnnnnnnnn-v8.log > processed.txt
 ```
+
+**source** [tutorial](https://nodejs.org/en/docs/guides/simple-profiling/)
