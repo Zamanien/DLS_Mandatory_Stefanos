@@ -23,14 +23,14 @@ app.get('/newUser', (req, res) => {
     res.sendStatus(200);
 });
 
-// this is the synchronous version, this will makse the program slow
+// this is the synchronous version, should block the execution and increase duration
 app.get('/auth', (req, res) => {
     let username = req.query.username || '';
     const password = req.query.password || '';
 
     username = username.replace(/[!@#$%^&*]/g, '');
 
-    if (!username || !password || users[username]) {
+    if (!username || !password || !users[username]) {
         return res.sendStatus(400);
     }
 
